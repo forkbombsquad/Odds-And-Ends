@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ppo casino ai"
+version = "0.1.0"
+description = ""
+authors = ["forkbombsquad <49342904+forkbombsquad@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+gym = "^0.26.2"
+torch = "^2.1.1"
+stable-baselines3 = "^2.2.1"
+tensorboard = "^2.15.1"
+wandb = "^0.16.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
