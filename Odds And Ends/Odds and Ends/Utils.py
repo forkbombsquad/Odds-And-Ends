@@ -8,7 +8,7 @@ def rand(min_val: int, max_val: int) -> int:
 def generateStandardDieSides(max_val: int) -> [int]:
     sides = []
     count = 0
-    while count < max:
+    while count < max_val:
         sides.append(count + 1)
         count += 1
     return sides

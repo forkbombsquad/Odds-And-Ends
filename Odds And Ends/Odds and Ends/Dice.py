@@ -5,8 +5,19 @@ class Die:
         self.sides = sides
 
     def roll(self) -> int:
-        rand(0, len(self.sides) - 1)
+        return rand(0, len(self.sides) - 1) + 1
 
+
+class Dice:
+
+    def __init__(self, dice: [Die]):
+        self.dice = dice
+
+    def roll(self) -> [int]:
+        total = []
+        for die in self.dice:
+            total.append(die.roll())
+        return total
 
 class D4(Die):
     def __init__(self):
@@ -31,3 +42,7 @@ class D12(Die):
 class D20(Die):
     def __init__(self):
         super().__init__(generateStandardDieSides(20))
+
+class Dice2d6(Dice):
+    def __init__(self):
+        super().__init__([D6(), D6()])
